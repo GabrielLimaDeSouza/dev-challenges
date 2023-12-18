@@ -19,3 +19,28 @@ https://smartfit-frontend-challenge.vercel.app/
 ## Implementação e Tecnologias
 
 O desafio foi implementado em React com o framework Next.js e o framework de CSS Tailwind.
+
+## Instruções de Utilização
+
+Para rodar o projeto localmente, você deve:
+
+Clonar o repositório: 
+
+```
+git clone https://github.com/GabrielLimaDeSouza/dev-challenges.git
+```
+
+Instalar as dependências com NPM:
+
+```
+npm install
+```
+
+Executar o projeto:
+
+```
+npm run dev
+```
+
+Após isso, o projeto estará rodando em http://localhost:3000/
+
