@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio
 
-## Getting Started
+A Smart Fit, por atuar no segmento de fitness, passou por várias mudanças na pandemia. Foi necessário desenvolver uma página para buscar unidades fechadas ou abertas para consulta e reserva.
 
-First, run the development server:
+Para isso o sistema desenvolvido deve possuir as seguintes funcionalidades: 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Carrega unidades através do arquivo json https://test-frontend-developer.s3.amazonaws.com/data/locations.json com method GET
+- Busca todas as unidades
+- Busca unidades com filtros
+- Mostra previsão de resultados encontrados
+- Mostra unidades ao buscar
+
+Link do desafio: https://github.com/bioritmo/front-end-code-challenge-smartsite
+
+## Link para o projeto hospedado
+
+https://smartfit-frontend-challenge.vercel.app/
+
+## Implementação e Tecnologias
+
+O desafio foi implementado em React com o framework Next.js e o framework de CSS Tailwind.
+
+## Instruções de Utilização
+
+Para rodar o projeto localmente, você deve:
+
+Clonar o repositório: 
+
+```
+git clone https://github.com/GabrielLimaDeSouza/dev-challenges.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Instalar as dependências com NPM:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Executar o projeto:
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Após isso, o projeto estará rodando em http://localhost:3000/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
