@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "@/assets/imgs/logo.png";
+import { useEffect, useState } from "react";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -32,14 +33,35 @@ const DisclaimerText = styled.p`
 `;
 
 const Header = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(
+    date
+  );
+  const day = date.getDay();
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setHour(getHour());
+    }, 1000);
+  }, []);
+
+  const getHour = () => {
+    return date.toISOString().slice(11, 16);
+  };
+
+  const [hour, setHour] = useState(getHour);
+
   return (
     <HeaderContainer>
       <img src={logo.src} />
       <InformationWrapper>
         <DateWrapper>
-          <DateText>14 de janeiro 2021</DateText>
+          <DateText>
+            {day} de {month} {year}
+          </DateText>
           <DateText>|</DateText>
-          <DateText>21:00 UTC</DateText>
+          <DateText>{hour} UTC</DateText>
         </DateWrapper>
         <DisclaimerText>
           Dados de câmbio disponibilizados pela Morningstar.

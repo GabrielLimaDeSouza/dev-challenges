@@ -22,12 +22,13 @@ const Mask = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: 0;
 `;
 
 const Graph = styled.img`
   position: absolute;
-  right: 18%;
+  right: 20%;
+  bottom: 30%;
   z-index: 2;
 `;
 
@@ -38,8 +39,8 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
         <Header />
         {children}
       </ContentWrapper>
-      <Graph src={graph.src} />
       <Mask src={mask.src} />
+      <Graph src={graph.src} />
     </Container>
   );
 };
