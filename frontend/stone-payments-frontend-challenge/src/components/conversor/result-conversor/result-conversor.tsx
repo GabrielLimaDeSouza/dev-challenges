@@ -87,14 +87,15 @@ const ResultConversor = () => {
   const cardIOF = 6.4;
 
   const calculateFinalMoneyValue = () => {
-    const dollarWithFee = dollarQnt * (1 + stateFee);
+    const dollarWithFee = dollarQnt * (1 + stateFee / 100);
     const dollarValueWithIof = dollarPrice * (1 + moneyIOF / 100);
 
     setFinalValue(dollarWithFee * dollarValueWithIof);
   };
 
   const calculateFinalCardValue = () => {
-    const dollarWithFeeAndIof = dollarQnt * (1 + stateFee + cardIOF / 100);
+    const dollarWithFeeAndIof =
+      dollarQnt * (1 + stateFee / 100) * (1 + cardIOF / 100);
 
     setFinalValue(dollarWithFeeAndIof * dollarPrice);
   };

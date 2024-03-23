@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import { QuotationData } from "@/interfaces/QuotationData";
-import { PaymentTypes } from "@/interfaces/PaymentTypes";
-import { useEffect, useState } from "react";
 
 const API_URL = "https://economia.awesomeapi.com.br/json/last/USD-BRL";
 
